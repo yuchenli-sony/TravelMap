@@ -1,0 +1,207 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+#map-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    height: 70vh;
+    margin-bottom: 20px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+#info-panel {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+#country-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+#country-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+    margin-bottom: 15px;
+}
+
+#country-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+#country-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #00ff00;
+}
+
+#timeline-slider {
+    margin-top: 20px;
+}
+
+#time-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, #00ff00, #00ffff);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#time-slider:hover {
+    opacity: 1;
+}
+
+#time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ff00ff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#current-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff00ff;
+}
+
+#country-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+#country-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+#country-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.country-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #00ff00;
+}
+
+#timeline {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.timeline-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.timeline-item:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px #00ffff;
+}
+
+button {
+    background-color: #ff00ff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+button:hover {
+    background-color: #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* 添加一些动画效果 */
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            -0.2rem -0.2rem 1rem #ff00de,
+            0.2rem 0.2rem 1rem #ff00de,
+            0 0 2rem #ff00de,
+            0 0 4rem #ff00de,
+            0 0 6rem #ff00de,
+            0 0 8rem #ff00de,
+            0 0 10rem #ff00de;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+h1 {
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.country-label {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-shadow: 0 0 5px #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.country-label span {
+    display: inline-block;
+    white-space: nowrap;
+}
